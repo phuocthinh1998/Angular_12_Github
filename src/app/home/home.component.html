@@ -1,12 +1,9 @@
 <div class="test">
   <h1>This is component!</h1>
-  <input [(ngModel)]="age"/>
-  <h2>Input your age:  <h2 class="name"> {{age}}</h2></h2>
-  <!-- <h1 *ngIf="age > 18">You are a man!</h1>
-  <h1 *ngIf="age <= 18">You are a son!</h1> -->
-  <div *ngIf="age>18;then man else boy"></div>
-  <ng-template #man><h1>You are a Man!</h1> </ng-template>
-  <ng-template #boy><h1>You are a Boy!</h1></ng-template>
+  <h1>Trái cây:</h1>
+  <div *ngFor="let trai of traicay; let i=index">
+    <h2>{{i+1}}. {{trai}}</h2>
+  </div>
 
 </div>
 
