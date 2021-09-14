@@ -1,9 +1,22 @@
 <div class="test">
-  <h1>This is component!</h1>
-  <h1>Trái cây:</h1>
+  <h1>Bảng giá trái cây các loại</h1>
+  <!-- <h1>Trái cây:</h1>
   <div *ngFor="let trai of traicay; let i=index">
     <h2>{{i+1}}. {{trai}}</h2>
-  </div>
-
+  </div> -->
+  <table class="table">
+    <tr>
+      <th>STT</th>
+      <th>Loại trái cây</th>
+      <th>Giá</th>
+      <th>Khuyến mãi</th>
+    </tr>
+    <tr *ngFor="let trai of traicay2; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{trai.ten}}</td>
+      <td><span [ngClass]="{'giaSale':trai.gia < '300'}">{{trai.gia}}</span></td>
+      <td><span *ngIf="trai.km">sale of 30%</span></td>
+    </tr>
+  </table>
 </div>
 
