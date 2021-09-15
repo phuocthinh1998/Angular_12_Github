@@ -1,10 +1,10 @@
 <div class="test">
-  <h1>Bảng giá trái cây các loại</h1>
+  <h1>Danh sách tỉnh thành Việt Nam</h1>
   <!-- <h1>Trái cây:</h1>
   <div *ngFor="let trai of traicay; let i=index">
     <h2>{{i+1}}. {{trai}}</h2>
   </div> -->
-  <table class="table">
+  <!-- <table class="table">
     <tr>
       <th>STT</th>
       <th>Loại trái cây</th>
@@ -17,6 +17,14 @@
       <td><span [ngClass]="{'giaSale':trai.gia < '300'}">{{trai.gia | currency:"USD"}}</span></td>
       <td><span >{{trai.km | onSale |uppercase}}</span></td>
     </tr>
-  </table>
+  </table> -->
+  Tỉnh:
+  <select class="city" (change)="changecity($event)">
+    <option *ngFor="let data of cityData" value="{{data.city}}">{{data.city}}</option>
+  </select> <br><br>
+  Quận/huyện:
+  <select class="city">
+    <option *ngFor="let district of districts" value="{{district}}">{{district}}</option>
+  </select>
 </div>
 
