@@ -14,8 +14,8 @@
     <tr *ngFor="let trai of traicay2; let i=index">
       <td>{{i+1}}</td>
       <td>{{trai.ten}}</td>
-      <td><span [ngClass]="{'giaSale':trai.gia < '300'}">{{trai.gia}}</span></td>
-      <td><span *ngIf="trai.km">sale of 30%</span></td>
+      <td><span [ngClass]="{'giaSale':trai.gia < '300'}">{{trai.gia | currency:"USD"}}</span></td>
+      <td><span >{{trai.km | onSale |uppercase}}</span></td>
     </tr>
   </table>
 </div>
