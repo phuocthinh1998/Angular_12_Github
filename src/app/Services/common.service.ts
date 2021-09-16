@@ -10,4 +10,13 @@ export class CommonService {
   public binhphuong(n:number): number{
     return n*n;
   }
+  public getCounter():number{
+    return this.counter;
+  }
+  public setCounter(n: number):void{
+    this.counter=n;
+  }
+  public submitData(data: any):void{
+    console.log('SubmitData to Server ',data)
+  }
 }
